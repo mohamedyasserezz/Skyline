@@ -1,0 +1,45 @@
+﻿@model Employee
+@using System.Globalization
+
+<h1 style="background-color:cyan;color:maroon;text-align:center">Welcome to Employee Details </h1>
+
+<div class="row"
+<dl class="row">
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.Id)</dt>
+	<dd class="col-10">@Model.Id | @Html.DisplayFor(emp => emp.Id)</dd>
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.FullName)</dt>
+	<dd class="col-10">@Model.FullName | @Html.DisplayFor(emp => emp.FullName)</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.Department)</dt>
+	<dd class="col-10">@Model.Department.Name (@Model.Department.Description) | @Html.DisplayFor(emp => emp.Department.Name)</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.NationalId)</dt>
+	<dd class="col-10">@Model.NationalId | @Html.DisplayFor(emp => emp.NationalId)</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.Position)</dt>
+	<dd class="col-10">@Model.Position</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.Salary)</dt>
+	<dd class="col-10">@Model.Salary</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.HiringDateTime)</dt>
+	<dd class="col-10">@Model.HiringDateTime</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.AttendenceTime)</dt>
+	<dd class="col-10">@Model.AttendenceTime</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.PhoneNumber)</dt>
+	<dd class="col-10">@Model.PhoneNumber</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.EmailAddress)</dt>
+	<dd class="col-10">@Model.EmailAddress</dd>
+
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.Appraisal)</dt>
+	<dd class="col-10">@Model.Appraisal</dd>
+	<dt class="col-2">@Html.DisplayNameFor(emp => emp.IsActive)</dt>
+	<dd class="col-10">@Model.IsActive</dd>
+</dl>
+<div class="col-6">
+	<img src="@Model.ImagePath" style="width:30rem;" />
+</div>
+<a asp-controller="Employees" asp-action="GetIndexView">Back</a>
